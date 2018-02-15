@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>
+    <%=title%>
+  </title>
+  <meta name="description" content="index page of social-media website">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- bootstrap -->
+
+  <!-- custom styles -->
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
+  <!-- custom scripts -->
+  <script src="js/index.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><%=user%></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active">
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/addWorkout">Workout hinzufügen</a>
+          </li>
+          <li>
+            <a href="#" id="delete">Workout löschen</a>
+          </li>
+          <li>
+            <a href="#" id="edit">Workout bearbeiten</a>
+          </li>
+        </ul>       
+      </div>
+    </div>
+  </nav>
+  <div class="container table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Datum</th>
+          <th>Beschreibung</th>
+          <th>Startzeit</th>
+          <th>Endzeit</th>
+          <th>Dauer</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for(workout of progress) { %>
+          <tr>
+            <td><%=workout.date%></td>
+            <td><%=workout.descr%></td>
+            <td><%=workout.start%></td>
+            <td><%=workout.end%></td>
+            <td><%=workout.duration%></td>
+            <input type="hidden" value="<%=workout.id%>"/>
+          </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </div>
+  <footer class="container-fluid text-center">
+    <hr />
+    <h2>
+      Gesamt: <%=ges%>
+    </h2>
+  </footer>
+</body>
+
+</html>

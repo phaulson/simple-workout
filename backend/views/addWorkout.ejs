@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        <%=title%>
+    </title>
+    <meta name="description" content="login to webshop">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- bootstrap -->
+
+    <!-- moment -->
+    <script src="plugins/moment/moment.js"></script>
+    <!-- moment -->
+
+    <!-- datepicker -->
+    <script src="plugins/datepicker/js/bootstrap-material-datetimepicker.js"></script>
+    <link rel="stylesheet" href="plugins/datepicker/css/bootstrap-material-datetimepicker.css">
+    <!-- datepicker -->
+
+    <!-- google icon font -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- google icon font -->
+
+    <!-- custom styles -->
+    <link rel="stylesheet" type="text/css" href="css/addWorkout.css" />
+    <!-- custom scripts -->
+    <script type="text/javascript" src="js/addWorkout.js"></script>
+</head>
+
+<body>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><%=user%></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li class="active">
+                    <a href="/addWorkout">Workout hinzufügen</a>
+                </li>
+                <li>
+                    <a href="#">Workout löschen</a>
+                </li>
+                <li>
+                    <a href="#">Workout bearbeiten</a>
+                </li>
+            </ul>       
+        </div>
+    </div>
+</nav>
+    <div class="login-page container">
+        <h1 class="text-center">Workout hinzufügen</h1>
+        <div class="form">
+            <form id="loginForm" action="/addWorkout" method="POST">
+                <div class="form-group">
+                    <label for="date">Datum</label>
+                    <input type="text" id="date" name="date" required/>
+                </div>
+
+                <div class="form-group">
+                    <label for="start">Startzeit</label>
+                    <input type="text" id="start" name="start" required/>
+                </div>
+
+                <div class="form-group">
+                    <label for="end">Endzeit</label>
+                    <input type="text" id="end" name="end" required/>
+                </div>
+
+                <div class="form-group">
+                    <label for="descr">Beschreibung</label>
+                    <textarea id="desrc" name="descr" required></textarea>
+                </div>
+
+                <input type="submit" value="Hinzufügen"/>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

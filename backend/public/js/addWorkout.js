@@ -1,8 +1,7 @@
-var date = new Date();
-var start = new Date();
-var end = new Date();
-
 $(document).ready(function() {
+    var date = new Date();
+    var start = new Date();
+    var end = new Date();
     $('#date').bootstrapMaterialDatePicker({ weekStart : 1, time: false,
         format : 'ddd DD MMM YYYY', lang: 'de', cancelText : 'ABBRECHEN' }).on('change', function(e, d) {
             date = d;

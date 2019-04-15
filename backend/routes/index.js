@@ -74,7 +74,8 @@ return hours + ":" + minutes;
 }
 
 function _getDateFormat(date) {
-    var dateStr = _getDayOfWeek(date) + '. ' + new Date(date).getDate() + ' ' + _getMonthName(date) + '. ' + new Date(date).getFullYear();
+    var day = new Date(date).getDate() < 10 ? "0" + new Date(date).getDate() : new Date(date).getDate();
+    var dateStr = _getDayOfWeek(date) + ', ' + day + ' ' + _getMonthName(date) + ' ' + new Date(date).getFullYear();
     if (dateStr.includes('null') || dateStr.includes('NaN'))
         return undefined;
     else
@@ -82,11 +83,11 @@ function _getDateFormat(date) {
 }
 function _getDayOfWeek(date) {
     var dayOfWeek = new Date(date).getDay();    
-    return isNaN(dayOfWeek) ? null : ['So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa'][dayOfWeek];
+    return isNaN(dayOfWeek) ? null : ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'][dayOfWeek];
 }
 function _getMonthName(date) {
     var dayOfWeek = new Date(date).getMonth();    
-    return isNaN(dayOfWeek) ? null : ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez'][dayOfWeek];       
+    return isNaN(dayOfWeek) ? null : ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][dayOfWeek];       
 }
 
 module.exports = router;

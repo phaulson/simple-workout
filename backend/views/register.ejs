@@ -9,11 +9,11 @@
     <meta name="description" content="create account">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <!-- bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <!-- bootstrap -->
 
     <!-- validate -->
@@ -29,7 +29,7 @@
 
 <body>
     <div class="login-page">
-        <h1 class="text-center">Account erstellen</h1>
+        <h1 class="text-center">Sign Up</h1>
         <div class="form">
             <form id="registerForm" action="/register" method="POST">
                 <% if(msg) { %>
@@ -39,14 +39,14 @@
                 <input type="text" id="username" name="username" placeholder="Username"
                     <% if(username) { %> value="<%=username%>" <% } %> autofocus />
 
-                <input type="password" id="passwordRegister" name="passwordRegister" placeholder="Passwort"
+                <input type="password" id="passwordRegister" name="passwordRegister" placeholder="Password"
                     <% if(password) { %> value="<%=password%>" <% } %> />
 
-                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Passwort bestätigen"
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm password"
                     <% if(password) { %> value="<%=password%>" <% } %> />
 
-                <input type="submit" value="Registrieren"/>
-                <p class="message">Bereits registriert? 
+                <input type="submit" value="Sign Up"/>
+                <p class="message">Already have an account? 
                     <a href="/login">Login</a>
                 </p>
             </form>

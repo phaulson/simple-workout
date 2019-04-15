@@ -32,7 +32,7 @@ $(document).ready(function() {
                             $('tbody').append(tr);
                         });
 
-                        $('h2').html('Gesamt: ' + ges);
+                        $('h2').html('Total: ' + ges);
                     }
                 });
             }

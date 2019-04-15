@@ -8,10 +8,10 @@ $(document).ready(function () {
             }
         },
         messages: {
-            username_email: "Bitte einen Usernamen eingeben",
+            username_email: "Username cannot be empty",
             passwordLogin: {
-                required: "Bitte ein Passwort eingeben",
-                minlength: "Das Passwort muss mind. 5 Zeichen lang sein"
+                required: "Password cannot be empty",
+                minlength: "Password must contain at least 5 characters"
             }
         }
     });

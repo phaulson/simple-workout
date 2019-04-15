@@ -9,11 +9,11 @@
     <meta name="description" content="login to webshop">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <!-- bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <!-- bootstrap -->
 
     <!-- validate -->
@@ -39,12 +39,12 @@
                 <input type="text" id="username_email" name="username_email" placeholder="Username"
                     <% if(username) { %> value="<%=username%>" <% } %> autofocus/>
 
-                <input type="password" id="passwordLogin" name="passwordLogin" placeholder="Passwort" 
+                <input type="password" id="passwordLogin" name="passwordLogin" placeholder="Password" 
                     <% if(password) { %> value="<%=password%>" <% } %> />
 
                 <input type="submit" value="Login"/>
-                <p class="message">Noch nicht registriert? 
-                    <a href="/register">Account erstellen</a>
+                <p class="message">No account yet? 
+                    <a href="/register">Sign up</a>
                 </p>
             </form>
         </div>

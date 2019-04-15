@@ -13,15 +13,15 @@ $(document).ready(function () {
             }
         },
         messages: {
-            username: "Bitte einen Usernamen eingeben",
+            username: "Username cannot be empty",
             passwordRegister: {
-                required: "Bitte ein Passwort eingeben",
-                minlength: "Das Passwort muss mind. 5 Zeichen lang sein"
+                required: "Password cannot be empty",
+                minlength: "Password must contain at least 5 characters"
             },
             confirmPassword: {
-                required: "Bitte Password bestätigen",
-                minlength: "Das Passwort muss mind. 5 Zeichen lang sein",
-                equalTo: "Die Passwörter müssen identisch sein"
+                required: "Please confirm password",
+                minlength: "Password must contain at least 5 characters",
+                equalTo: "Passwords do not match"
             }
         }
     });

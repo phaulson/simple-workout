@@ -33,7 +33,7 @@ function register(req, res) {
             res.redirect('/');
         }
         else
-            res.render('register', { title: 'Register', msg: 'Benutzername existiert bereits', username: username, password: password });
+            res.render('register', { title: 'Register', msg: 'Username already exists', username: username, password: password });
     });
 }
 

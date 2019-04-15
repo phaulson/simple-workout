@@ -9,11 +9,11 @@
     <meta name="description" content="login to webshop">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <!-- bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <!-- bootstrap -->
 
     <!-- moment -->
@@ -36,61 +36,67 @@
 </head>
 
 <body>
-<nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#"><%=user%></a>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><%=user%></a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/addWorkout">Add Workout</a>
+                    </li>
+                    <li>
+                        <a href="#">Delete Workout</a>
+                    </li>
+                    <li class="active">
+                        <a href="#">Edit Workout</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav">
-                <li>
-                    <a href="/">Home</a>
-                </li>
-                <li>
-                    <a href="/addWorkout">Workout hinzufügen</a>
-                </li>
-                <li>
-                    <a href="#">Workout löschen</a>
-                </li>
-                <li class="active">
-                    <a href="#">Workout bearbeiten</a>
-                </li>
-            </ul>       
-        </div>
-    </div>
-</nav>
+    </nav>
     <div class="login-page container">
-        <h1 class="text-center">Workout bearbeiten</h1>
+        <h1 class="text-center">Edit Workout</h1>
         <div class="form">
             <form id="loginForm" action="/editWorkout/<%=workout.id%>" method="POST">
                 <div class="form-group">
-                    <label for="date">Datum</label>
-                    <input type="text" id="date" name="date" value="<%=workout.date%>" required/>
+                    <label for="date">Date</label>
+                    <input type="text" id="date" name="date" value="<%=workout.date%>" required />
                 </div>
 
                 <div class="form-group">
-                    <label for="start">Startzeit</label>
-                    <input type="text" id="start" name="start" value="<%=workout.start%>" required/>
+                    <label for="start">Start time</label>
+                    <input type="text" id="start" name="start" value="<%=workout.start%>" required />
                 </div>
 
                 <div class="form-group">
-                    <label for="end">Endzeit</label>
-                    <input type="text" id="end" name="end" value="<%=workout.end%>" required/>
+                    <label for="end">End time</label>
+                    <input type="text" id="end" name="end" value="<%=workout.end%>" required />
                 </div>
 
                 <div class="form-group">
-                    <label for="descr">Beschreibung</label>
+                    <label for="descr">Description</label>
                     <textarea id="desrc" name="descr" required><%=workout.descr%></textarea>
                 </div>
 
-                <input type="submit" value="Bearbeiten"/>
+                <input type="submit" value="Edit" />
             </form>
         </div>
     </div>
 </body>
+
 </html>

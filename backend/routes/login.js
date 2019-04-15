@@ -25,7 +25,7 @@ function login(req, res) {
             res.redirect('/');
         }
         else {
-            res.render('login', { title: 'Login', msg: 'Falscher username oder password', username: username, password: password });
+            res.render('login', { title: 'Login', msg: 'Wrong username or password', username: username, password: password });
         }
     });
 }

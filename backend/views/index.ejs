@@ -9,11 +9,11 @@
   <meta name="description" content="index page of social-media website">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   <!-- bootstrap -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <!-- bootstrap -->
 
   <!-- custom styles -->
@@ -39,27 +39,32 @@
             <a href="/">Home</a>
           </li>
           <li>
-            <a href="/addWorkout">Workout hinzufügen</a>
+            <a href="/addWorkout">Add Workout</a>
           </li>
           <li>
-            <a href="#" id="delete">Workout löschen</a>
+            <a href="#" id="delete">Delete Workout</a>
           </li>
           <li>
-            <a href="#" id="edit">Workout bearbeiten</a>
+            <a href="#" id="edit">Edit Workout</a>
           </li>
-        </ul>       
+        </ul>   
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a>
+          </li>
+        </ul>    
       </div>
     </div>
   </nav>
-  <div class="container table-responsive">
+  <div class="container table-responsive form">
     <table class="table">
       <thead>
         <tr>
-          <th>Datum</th>
-          <th>Beschreibung</th>
-          <th>Startzeit</th>
-          <th>Endzeit</th>
-          <th>Dauer</th>
+          <th>Date</th>
+          <th>Description</th>
+          <th>Start time</th>
+          <th>End time</th>
+          <th>Duration</th>
         </tr>
       </thead>
       <tbody>
@@ -79,7 +84,7 @@
   <footer class="container-fluid text-center">
     <hr />
     <h2>
-      Gesamt: <%=ges%>
+      Total: <%=ges%>
     </h2>
   </footer>
 </body>

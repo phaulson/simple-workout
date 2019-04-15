@@ -1,7 +1,7 @@
 {
   "name": "fitness-wette",
   "version": "1.0.0",
-  "description": "ein Webserver um unsere Fortschritte festzuhalten",
+  "description": "A simple node.js app to manage workouts",
   "main": "backend/index.js",
   "scripts": {
     "start": "node backend/index.js"

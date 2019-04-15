@@ -11,7 +11,7 @@ var cookieParser = require('cookie-parser');
 var mongoose = require('mongoose');
 
 // connect to mongoose
-// use own mlab account and mongodb connection string connection
+// use own mlab account and mongodb connection string
 mongoose.connect('mongodb://<dbuser>:<dbpassword>@ds<number><dsnumber>.mlab.com:<dsnumber>/<database>', {
     useMongoClient: true
 });

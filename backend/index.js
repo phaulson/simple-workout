@@ -11,17 +11,12 @@ var cookieParser = require('cookie-parser');
 var mongoose = require('mongoose');
 
 // connect to mongoose
-mongoose.connect('mongodb://paulson:paulim15@ds163595.mlab.com:63595/paulsondatabase', {
+// use own mlab account and mongodb connection string connection
+mongoose.connect('mongodb://<dbuser>:<dbpassword>@ds<number><dsnumber>.mlab.com:<dsnumber>/<database>', {
     useMongoClient: true
 });
 var db = mongoose.connection;
 db.on('open', function() {
-    // insert first admin
-    // var User = require('./models/user');
-    // User.remove({}, function() {});
-    // var admin = new User({username: 'paulson', email: 'pmuehlbacher13@gmail.com', password: 'paulim15', registeredAt: Date.now(), admin:  true });
-    // admin.save();
-    // console.log(admin);
     console.log('connected to mongodb');
 });
 
